@@ -8,6 +8,7 @@ import VueTimepicker from 'vue2-timepicker'
 import MembersComponent from './MembersComponent'
 import UserSearchComponent from './UserSearchComponent'
 import gcApiHandler from '../../../core/social-handlers/GoogleCalendarHandler'
+import momentTz from 'moment-timezone'
 
 export default {
   name: 'EditEventComponent',
@@ -161,7 +162,7 @@ export default {
       return me
     },
     myTimeZone () {
-      return moment.tz.guess()
+      return momentTz.tz.guess()
     },
     _startDate: {
       get () {
